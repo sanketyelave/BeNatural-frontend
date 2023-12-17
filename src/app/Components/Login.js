@@ -21,7 +21,7 @@ export default function Login({ onClose }) {
             localStorage.setItem('username', responseUsername);
             localStorage.setItem('email', responseEmail);
             localStorage.setItem('role', responseRole);
-            window.location.href = 'https://657ea9771ade9141144729ff--magenta-dusk-440146.netlify.app/home';
+            window.location.href = '/home';
         } catch (error) {
             // Handle login failure (display error message, etc.)
             console.error(error.response.data.message);
