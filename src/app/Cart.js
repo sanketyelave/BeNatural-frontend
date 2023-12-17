@@ -52,7 +52,11 @@ const CartPage = () => {
 
             // Refresh the cart data after removing the item
             const updatedCart = await fetchCartData();
+
             setCart(updatedCart);
+            setTimeout(() => {
+                window.location.reload();
+            }, 100);
         } catch (error) {
             console.error('Error removing item from cart:', error.response.data);
         }
@@ -106,10 +110,10 @@ const CartPage = () => {
                                             <th>Image</th>
                                             <th className='hide'>Name</th>
                                             <th className='hide'>Type</th>
-                                            <th>Price <ion-icon name="usd"></ion-icon>
+                                            <th>Price <ion-icon name="usd" style={{ color: '#fff' }}></ion-icon>
                                             </th>
                                             <th>Quantity</th>
-                                            <th>Total <ion-icon name="usd"></ion-icon>
+                                            <th>Total <ion-icon name="usd" style={{ color: '#fff' }}></ion-icon>
                                             </th>
                                             <th>Action</th>
                                         </tr>
