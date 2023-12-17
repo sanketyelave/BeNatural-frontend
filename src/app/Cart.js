@@ -127,7 +127,7 @@ const CartPage = () => {
                                                     <td>{item.quantitySelected}</td>
                                                     <td>{item.price * item.quantitySelected}</td>
                                                     <td>
-                                                        <button onClick={() => handleRemoveFromCart(item._id)}>
+                                                        <button onClick={alert(`Payment Gateway has not yet integreted 💳 \n sorry for inconvinence caused \n We are on our way!! Thankyou 🙏🏼`)}>
                                                             Buy
                                                         </button>
                                                         <div className="hover"> <ion-icon name="trash-outline" style={{ color: 'red', marginLeft: '8px', marginTop: '8px' }} onClick={() => handleRemoveFromCart(item._id)}></ion-icon></div>
