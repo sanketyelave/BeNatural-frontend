@@ -63,7 +63,7 @@ function Header() {
                 <img className="logo" alt="Be natural logo" src="img/Benatural.png" />
             </a>
 
-            <nav className={`main-nav ${isMobileMenuOpen ? 'open' : ''}`}>
+            <nav className={`main-nav ${isMobileMenuOpen ? 'open' : ''}`} style={{ zIndex: '2' }}>
                 <ul className="main-nav-list" style={{ fontFamily: "Rubik" }}>
                     <li><a className="main-nav-link" href="/home" style={{ fontFamily: "Rubik" }} onClick={() => window.location.href = '/home'}>Home <ion-icon name="home-outline"></ion-icon></a></li>
                     <li><a className="main-nav-link" href="/products" onClick={() => window.location.href = '/products'}>Products<ion-icon name="basket-outline"></ion-icon></a></li>
