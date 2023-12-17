@@ -85,7 +85,7 @@ export default function LandingPage() {
 
 
 
-                <header className={`header  ${isMobileMenuOpen ? 'nav-open' : ''}`} style={{ zIndex: "999" }}>
+                <header className={`header  ${isMobileMenuOpen ? 'nav-open' : ''}`} style={{ zIndex: "99" }}>
                     <a href="#">
                         <img className="logo" alt="Be Natural" src="img/Benatural.png" />
                     </a>
@@ -136,7 +136,7 @@ export default function LandingPage() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="hero-img-box" style={{ zIndex: "3" }}>
+                            <div className="hero-img-box" >
                                 <picture>
                                     {/* <source srcset="img/hero.webp" type="image/webp" /> */}
                                     <source srcset="img/hero.png" type="image/png" />

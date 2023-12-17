@@ -88,7 +88,7 @@ function Products() {
                 </div>
 
                 <div className="meal" >
-                    <img src="img/products/Concealer/2.jpg" className="meal-img" alt="Japanese Gyozas" style={{ width: '100%', height: '32.5rem' }} />
+                    <img src="img/products/CONCEALER/4.jpg" className="meal-img" alt="Japanese Gyozas" style={{ width: '100%', height: '32.5rem' }} />
                     <div className="meal-content">
                         <div className="meal-tags">
                             <span className="tag tag--vegan">Ecofriendly</span>
