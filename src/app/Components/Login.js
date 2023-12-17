@@ -21,7 +21,7 @@ export default function Login({ onClose }) {
             localStorage.setItem('username', responseUsername);
             localStorage.setItem('email', responseEmail);
             localStorage.setItem('role', responseRole);
-            window.location.href = 'https://be-natural-frontend.vercel.app//home';
+            window.location.href = 'https://be-natural.vercel.app//home';
         } catch (error) {
             // Handle login failure (display error message, etc.)
             console.error(error.response.data.message);
