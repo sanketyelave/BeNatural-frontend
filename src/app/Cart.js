@@ -27,7 +27,7 @@ const CartPage = () => {
     useEffect(() => {
         const fetchCartData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/get-cart-data');
+                const response = await axios.get('https://benatural.onrender.com/get-cart-data');
                 const cartData = response.data;
                 setCart(cartData);
                 setIsCartEmpty(cartData.length === 0);
@@ -43,7 +43,7 @@ const CartPage = () => {
 
     const handleRemoveFromCart = async (cartItemId) => {
         try {
-            const response = await axios.delete(`http://localhost:5000/remove-from-cart/${cartItemId}`);
+            const response = await axios.delete(`https://benatural.onrender.com/remove-from-cart/${cartItemId}`);
             console.log(response.data);
 
             // Refresh the cart data after removing the item
@@ -56,7 +56,7 @@ const CartPage = () => {
 
     const fetchCartData = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/get-cart-data');
+            const response = await axios.get('https://benatural.onrender.com/get-cart-data');
             const cartData = response.data;
             setIsCartEmpty(cartData.length === 0);
             return cartData;

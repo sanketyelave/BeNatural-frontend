@@ -42,7 +42,7 @@ export default function Eyeshadow() {
     };
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/products')
+        axios.get('https://benatural.onrender.com/api/products')
             .then(response => {
                 setProducts(response.data);
                 setLoading(false);
@@ -69,7 +69,7 @@ export default function Eyeshadow() {
 
         try {
             console.log(quantity, product, usersName);
-            const response = await axios.post('http://localhost:5000/add-to-cart', {
+            const response = await axios.post('https://benatural.onrender.com/add-to-cart', {
                 quantity,
                 product,
                 usersName,
@@ -82,7 +82,7 @@ export default function Eyeshadow() {
 
         try {
             const updatedQuantity = product.quantity - quantity;
-            const response = await axios.patch(`http://localhost:5000/api/products/${product._id}`, {
+            const response = await axios.patch(`https://benatural.onrender.com/api/products/${product._id}`, {
                 quantity: updatedQuantity,
             });
             setTimeout(() => {

@@ -41,7 +41,7 @@ const AddProductForm = () => {
 
         try {
             console.log('Request Data:', product);
-            axios.post('http://localhost:5000/api/products', product)
+            axios.post('https://benatural.onrender.com/api/products', product)
                 .then(response => {
                     console.log('Adding product:', response.data);
                     alert('Product added ✅')
