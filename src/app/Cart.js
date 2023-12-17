@@ -102,9 +102,11 @@ const CartPage = () => {
                                             <th>Image</th>
                                             <th className='hide'>Name</th>
                                             <th className='hide'>Type</th>
-                                            <th>Price</th>
+                                            <th>Price <ion-icon name="usd"></ion-icon>
+                                            </th>
                                             <th>Quantity</th>
-                                            <th>Total</th>
+                                            <th>Total <ion-icon name="usd"></ion-icon>
+                                            </th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
