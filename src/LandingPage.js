@@ -85,12 +85,12 @@ export default function LandingPage() {
 
 
 
-                <header className={`header  ${isMobileMenuOpen ? 'nav-open' : ''}`} style={{ zIndex: "99" }}>
+                <header className={`header  ${isMobileMenuOpen ? 'nav-open' : ''}`} style={{ zIndex: "3" }}>
                     <a href="#">
                         <img className="logo" alt="Be Natural" src="img/Benatural.png" />
                     </a>
 
-                    <nav className={`main-nav ${isMobileMenuOpen ? 'open' : ''}`}>
+                    <nav className={`main-nav ${isMobileMenuOpen ? 'open' : ''}`} style={{ zIndex: "3" }}>
                         <ul className="main-nav-list" style={{ fontFamily: "Rubik" }}>
                             <li><a className="main-nav-link" href="#how" style={{ fontFamily: "Rubik" }} onClick={handleNavLinkClick}>How it works</a></li>
                             <li><a className="main-nav-link" href="#meals" onClick={handleNavLinkClick}>Products<ion-icon name="lock-closed-outline"></ion-icon></a></li>
@@ -136,7 +136,7 @@ export default function LandingPage() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="hero-img-box" >
+                            <div className="hero-img-box" style={{ zIndex: "2" }}>
                                 <picture>
                                     {/* <source srcset="img/hero.webp" type="image/webp" /> */}
                                     <source srcset="img/hero.png" type="image/png" />

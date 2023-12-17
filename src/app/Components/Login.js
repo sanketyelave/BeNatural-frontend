@@ -31,7 +31,7 @@ export default function Login({ onClose }) {
 
     return (
         <div>
-            <section className="login-section modal-overlay" style={{ zIndex: "991" }} id="login-cta">
+            <section className="login-section modal-overlay" style={{ zIndex: "5" }} id="login-cta">
                 <form className="login-form">
                     <div className='login-heading'>
                         <h3>Login here:</h3>

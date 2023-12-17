@@ -125,7 +125,7 @@ function Hero() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="hero-img-box">
+                            <div className="hero-img-box" style={{ zIndex: '1' }}>
                                 <picture>
                                     {/* <source srcset="img/hero.webp" type="image/webp" /> */}
                                     <source srcset={`img/bgRemovedproducts/${imageProduct[backgroundProductIndex]}`} className=" ani-1" type="image/png" />
