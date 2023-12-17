@@ -95,8 +95,8 @@ export default function LandingPage() {
                             <li><a className="main-nav-link" href="#how" style={{ fontFamily: "Rubik" }} onClick={handleNavLinkClick}>How it works</a></li>
                             <li><a className="main-nav-link" href="#meals" onClick={handleNavLinkClick}>Products<ion-icon name="lock-closed-outline"></ion-icon></a></li>
                             <li><a className="main-nav-link" href="#testimonials" onClick={handleNavLinkClick}>Testimonies</a></li>
-                            <li><a className="main-nav-link" href="#" onClick={() => openlogin()}>Login</a></li>
-                            <li><a className="main-nav-link nav-cta" href="#cta" onClick={handleNavLinkClick}>Explore</a></li>
+                            <li><a className="main-nav-link" href="#" onClick={() => openlogin()} style={{ color: '#86bc25' }}>Login</a></li>
+                            <li><a className="main-nav-link nav-cta" href="#cta" onClick={handleNavLinkClick}>Sign up</a></li>
                         </ul>
                     </nav>
 
