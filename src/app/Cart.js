@@ -77,79 +77,79 @@ const CartPage = () => {
     return (
         <div>
             <Header />
-            {loading ? (
-                <LoadingPage /> // Show loading page while data is being fetched
-            ) : (
-                <>
-                    {isCartEmpty ? (
-                        <div className="empty-cart-skeleton">
-                            <h2 className="heading-secondary " style={{ color: 'green', textAlign: 'center', margin: '5rem' }}>
-                                Your Cart is Empty <ion-icon name="cart-outline"></ion-icon>
-                            </h2>
-                        </div>
-                    ) : (
-                        <div>
-                            <h2 className="heading-secondary " style={{
-                                textAlign: 'center',
-                                WebkitTextStroke: '2px green',
-                                WebkitTextFillColor: 'transparent',
-                                display: 'inline-block',
-                                padding: '4px',
-                                margin: 'auto',
-                                width: '100%',
-                                marginTop: '3rem',
-                                marginBottom: '3rem',
+            <>
+                {isCartEmpty ? (
+                    <div className="empty-cart-skeleton">
+                        <h2 className="heading-secondary " style={{ color: 'green', textAlign: 'center', margin: '5rem' }}>
+                            Your Cart is Empty <ion-icon name="cart-outline"></ion-icon>
+                        </h2>
+                    </div>
+                ) : (
+                    <>
+                        {loading ? (
+                            <LoadingPage /> // Show loading page while data is being fetched
+                        ) : (
+                            <div>
+                                <h2 className="heading-secondary " style={{
+                                    textAlign: 'center',
+                                    WebkitTextStroke: '2px green',
+                                    WebkitTextFillColor: 'transparent',
+                                    display: 'inline-block',
+                                    padding: '4px',
+                                    margin: 'auto',
+                                    width: '100%',
+                                    marginTop: '3rem',
+                                    marginBottom: '3rem',
 
-                            }}>
-                                Your Cart is Ready To Go <ion-icon name="cart-outline"></ion-icon>
-                            </h2>
-                            <div className="cart-table-container" >
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Image</th>
-                                            <th className='hide'>Name</th>
-                                            <th className='hide'>Type</th>
-                                            <th>Price <ion-icon name="usd" style={{ color: '#fff' }}></ion-icon>
-                                            </th>
-                                            <th>Quantity</th>
-                                            <th>Total <ion-icon name="usd" style={{ color: '#fff' }}></ion-icon>
-                                            </th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {cart.map((item) => (
-                                            item.usersName === username && (
-                                                <tr key={item.id}>
-                                                    <td>
-                                                        <img
-                                                            src={item.imageUrl}
-                                                            alt={item.name}
-                                                            style={{ width: '10rem', height: '10rem' }}
-                                                        />
-                                                    </td>
-                                                    <td className='hide'>{item.name}</td>
-                                                    <td className='hide'>{item.type}</td>
-                                                    <td>{item.price}</td>
-                                                    <td>{item.quantitySelected}</td>
-                                                    <td>{item.price * item.quantitySelected}</td>
-                                                    <td>
-                                                        <button onClick={() => notify()}>
-                                                            Buy
-                                                        </button>
-                                                        <div className="hover"> <ion-icon name="trash-outline" style={{ color: 'red', marginLeft: '8px', marginTop: '8px' }} onClick={() => handleRemoveFromCart(item._id)}></ion-icon></div>
-                                                    </td>
-                                                </tr>
-                                            )
-                                        ))}
-                                    </tbody>
-                                </table>
+                                }}>
+                                    Your Cart is Ready To Go <ion-icon name="cart-outline"></ion-icon>
+                                </h2>
+                                <div className="cart-table-container" >
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Image</th>
+                                                <th className='hide'>Name</th>
+                                                <th className='hide'>Type</th>
+                                                <th>Price USD  </th>
+                                                <th>Quantity</th>
+                                                <th>Total USD </th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {cart.map((item) => (
+                                                item.usersName === username && (
+                                                    <tr key={item.id}>
+                                                        <td>
+                                                            <img
+                                                                src={item.imageUrl}
+                                                                alt={item.name}
+                                                                style={{ width: '10rem', height: '10rem' }}
+                                                            />
+                                                        </td>
+                                                        <td className='hide'>{item.name}</td>
+                                                        <td className='hide'>{item.type}</td>
+                                                        <td>{item.price}</td>
+                                                        <td>{item.quantitySelected}</td>
+                                                        <td>{item.price * item.quantitySelected}</td>
+                                                        <td>
+                                                            <button onClick={() => notify()}>
+                                                                Buy
+                                                            </button>
+                                                            <div className="hover"> <ion-icon name="trash-outline" style={{ color: 'red', marginLeft: '8px', marginTop: '8px' }} onClick={() => handleRemoveFromCart(item._id)}></ion-icon></div>
+                                                        </td>
+                                                    </tr>
+                                                )
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                        </div>
-                    )}
-                </>
-            )}
+                        )}
+                    </>
+                )}
+            </>
             <Footer />
         </div>
     );
