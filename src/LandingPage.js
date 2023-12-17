@@ -374,9 +374,9 @@ export default function LandingPage() {
                         <div className="container">
                             <div className="cta">
                                 <div className="cta-text-box">
-                                    <h2 className="heading-secondary">Get your first Product free dilivered!</h2>
+                                    <h2 className="heading-secondary">Sign Up here !!</h2>
                                     <p className="cta-text">
-                                        This is just to know more about our customers !
+                                        Get your first Product free dilivered!
                                     </p>
 
                                     <form className="cta-form" name="sign-up" netlify>
